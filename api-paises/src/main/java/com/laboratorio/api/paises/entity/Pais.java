@@ -12,7 +12,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
+@Entity(name="pais")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -22,25 +22,28 @@ public class Pais {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int codigoPais;
+	Long id;
+	
+	@Column(nullable=false, length = 10)
+	int codigoPais;
 	
 	@Column(nullable=false, length = 50)
-	private String nombrePais;
+	String nombrePais;
 	
 	@Column(nullable=false, length = 50)
-	private String capitalPais;
+	String capitalPais;
 	
 	@Column(nullable=false, length = 50)
-	private String región;
+	String región;
 	
 	@Column(nullable=false)
-	private Long población;
+	Long población;
 	
 	@Column(nullable=false)
-	private float latitud;
+	float latitud;
 	
 	@Column(nullable=false)
-	private float longitud;
+	float longitud;
 
 
 }
