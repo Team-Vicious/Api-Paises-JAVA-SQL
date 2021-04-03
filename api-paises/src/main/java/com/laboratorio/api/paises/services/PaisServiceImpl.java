@@ -1,5 +1,13 @@
 package com.laboratorio.api.paises.services;
 
-public class PaisServiceImpl {
+import org.springframework.stereotype.Service;
+
+import com.formaciondbi.microservicios.generics.services.ServicesImpl;
+import com.laboratorio.api.paises.entity.Pais;
+
+@Service
+public class PaisServiceImpl extends ServicesImpl<Pais, Long>{
+	
+	
 
 }
